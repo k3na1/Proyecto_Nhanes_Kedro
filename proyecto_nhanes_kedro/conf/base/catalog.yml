@@ -1,4 +1,245 @@
-# Here you can define all your datasets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
-# Link: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
+# ═══════════════════════════════════════════════════════════════
+# CAPA RAW — Datos crudos NHANES en formato SAS (.xpt)
+# ═══════════════════════════════════════════════════════════════
+
+demo_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_DEMO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+alq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_ALQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+biopro_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BIOPRO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+bmx_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BMX.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+bpxo_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BPXO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+diq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_DIQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ghb_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_GHB.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hdl_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_HDL.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+mcq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_MCQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+paq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_PAQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+slq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_SLQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+smq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_SMQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+tchol_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_TCHOL.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+trigly_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_TRIGLY.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA INTERMEDIATE — Tablas limpias individuales (Parquet)
+# ═══════════════════════════════════════════════════════════════
+
+demo_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/demo_clean.parquet
+
+alq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/alq_clean.parquet
+
+biopro_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/biopro_clean.parquet
+
+bmx_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/bmx_clean.parquet
+
+bpxo_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/bpxo_clean.parquet
+
+diq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/diq_clean.parquet
+
+ghb_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ghb_clean.parquet
+
+hdl_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/hdl_clean.parquet
+
+mcq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/mcq_clean.parquet
+
+paq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/paq_clean.parquet
+
+slq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/slq_clean.parquet
+
+smq_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/smq_clean.parquet
+
+tchol_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/tchol_clean.parquet
+
+trigly_clean:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/trigly_clean.parquet
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA PRIMARY — Master Table unificada
+# ═══════════════════════════════════════════════════════════════
+
+master_table:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/master_table.parquet
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA FEATURE — Tabla analitica con Health Risk Score
+# ═══════════════════════════════════════════════════════════════
+
+feature_table:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/feature_table.parquet
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA MODEL INPUT — Splits train/test
+# ═══════════════════════════════════════════════════════════════
+
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_train.parquet
+
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_test.parquet
+
+y_train:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/y_train.parquet
+
+y_test:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/y_test.parquet
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA MODELS — Modelos serializados
+# ═══════════════════════════════════════════════════════════════
+
+trained_regressors:
+  type: pickle.PickleDataset
+  filepath: data/06_models/trained_regressors.pkl
+
+best_regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/best_regressor.pkl
+
+optimized_regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/optimized_regressor.pkl
+
+clustering_artifacts:
+  type: pickle.PickleDataset
+  filepath: data/06_models/clustering_artifacts.pkl
+
+# ═══════════════════════════════════════════════════════════════
+# CAPA REPORTING — Metricas y resultados
+# ═══════════════════════════════════════════════════════════════
+
+regression_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/regression_metrics.json
+
+feature_importance:
+  type: pandas.ParquetDataset
+  filepath: data/08_reporting/feature_importance.parquet
+
+clustering_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/clustering_metrics.json
+
+cluster_profiles:
+  type: pandas.ParquetDataset
+  filepath: data/08_reporting/cluster_profiles.parquet
+
+hyperparameter_results:
+  type: json.JSONDataset
+  filepath: data/08_reporting/hyperparameter_results.json
+
+optimized_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/optimized_metrics.json

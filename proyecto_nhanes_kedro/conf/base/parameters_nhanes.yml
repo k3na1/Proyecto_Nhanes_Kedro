@@ -1,0 +1,159 @@
+# ═══════════════════════════════════════════════════════════════
+# Parametros del Proyecto NHANES - Parcial 3
+# ═══════════════════════════════════════════════════════════════
+
+# --- Codigos especiales NHANES que representan datos faltantes ---
+# En NHANES, los codigos 7, 9, 77, 99, 777, 999, 7777, 9999
+# representan "No sabe" / "Rehuso responder" / "Missing"
+nhanes_missing_codes: [7, 9, 77, 99, 777, 999, 7777, 9999, 99999]
+
+# El valor ~5.4e-79 aparece en los .xpt como placeholder para NaN
+nhanes_xpt_nan_value: 5.397605346934028e-79
+
+# --- Variables seleccionadas por tabla ---
+# Solo las variables relevantes para el modelo de salud
+
+demo_vars:
+  - SEQN
+  - RIDAGEYR    # Edad en anios
+  - RIAGENDR    # Genero (1=Hombre, 2=Mujer)
+  - RIDRETH3    # Raza/Etnia
+  - DMDEDUC2    # Nivel educativo (adultos)
+  - DMDMARTZ    # Estado civil
+  - INDFMPIR    # Ratio ingreso/pobreza
+
+alq_vars:
+  - SEQN
+  - ALQ111      # Alguna vez 12+ bebidas en un anio
+  - ALQ121      # Frecuencia consumo en ultimo anio
+  - ALQ130      # Cantidad promedio por dia de consumo
+  - ALQ142      # Frecuencia 4-5+ bebidas en un dia
+
+bmx_vars:
+  - SEQN
+  - BMXWT       # Peso (kg)
+  - BMXHT       # Estatura (cm)
+  - BMXBMI      # Indice de masa corporal
+  - BMXWAIST    # Circunferencia de cintura (cm)
+
+bpxo_vars:
+  - SEQN
+  - BPXOSY1     # Presion sistolica - lectura 1
+  - BPXODI1     # Presion diastolica - lectura 1
+  - BPXOSY2     # Presion sistolica - lectura 2
+  - BPXODI2     # Presion diastolica - lectura 2
+  - BPXOSY3     # Presion sistolica - lectura 3
+  - BPXODI3     # Presion diastolica - lectura 3
+
+diq_vars:
+  - SEQN
+  - DIQ010      # Diagnostico de diabetes (1=Si, 2=No, 3=Borderline)
+  - DIQ160      # Prediabetes
+  - DIQ050      # Toma insulina
+  - DIQ070      # Toma pildoras para diabetes
+
+paq_vars:
+  - SEQN
+  - PAQ605      # Actividad vigorosa en trabajo
+  - PAQ620      # Actividad moderada en trabajo
+  - PAQ635      # Camina/bicicleta para transporte
+  - PAQ650      # Actividad vigorosa recreativa
+  - PAQ665      # Actividad moderada recreativa
+  - PAD680      # Minutos sedentario por dia
+
+slq_vars:
+  - SEQN
+  - SLD012      # Horas de sueno entre semana
+  - SLD013      # Horas de sueno fin de semana
+  - SLQ050      # Diagnostico de trastorno de sueno
+
+smq_vars:
+  - SEQN
+  - SMQ020      # Fumo 100+ cigarrillos en su vida (1=Si, 2=No)
+  - SMQ040      # Fuma actualmente (1=Diario, 2=Algunos dias, 3=No)
+  - SMAQUEX2    # Edad del cuestionario (1=12-17, 2=18+)
+
+mcq_vars:
+  - SEQN
+  - MCQ010      # Alguna vez le dijeron que tiene asma
+  - MCQ080      # Diagnostico de sobrepeso por medico
+  - MCQ160A     # Diagnostico de artritis
+  - MCQ160B     # Fallo cardiaco congestivo
+  - MCQ160C     # Enfermedad coronaria
+  - MCQ160D     # Angina
+  - MCQ160E     # Ataque cardiaco
+  - MCQ160F     # Derrame cerebral
+  - MCQ220      # Alguna vez diagnosticado con cancer
+
+ghb_vars:
+  - SEQN
+  - LBXGH       # Hemoglobina glicosilada HbA1c (%)
+
+hdl_vars:
+  - SEQN
+  - LBDHDD      # Colesterol HDL (mg/dL)
+
+tchol_vars:
+  - SEQN
+  - LBXTC       # Colesterol total (mg/dL)
+
+trigly_vars:
+  - SEQN
+  - LBXTR       # Trigliceridos (mg/dL)
+  - LBDLDL      # Colesterol LDL (mg/dL)
+
+biopro_vars:
+  - SEQN
+  - LBXSGL      # Glucosa en sangre (mg/dL)
+  - LBXSCR      # Creatinina serica (mg/dL)
+  - LBXSUA      # Acido urico (mg/dL)
+  - LBXSTP      # Proteina total (g/dL)
+  - LBXSAL      # Albumina (g/dL)
+  - LBXSGB      # Globulina (g/dL)
+  - LBXSBU      # Nitrogeno ureico BUN (mg/dL)
+  - LBXSPH      # Fosforo (mg/dL)
+  - LBXSCA      # Calcio (mg/dL)
+
+# --- Configuracion del target (Health Risk Score) ---
+target_column: health_risk_score
+
+# Esperanza de vida base por genero (OMS 2023, promedio global)
+base_life_expectancy:
+  male: 70.8
+  female: 75.6
+
+# --- Configuracion de split ---
+test_size: 0.2
+random_state: 42
+
+# --- Configuracion de modelos de regresion ---
+regressor_params:
+  linear:
+    fit_intercept: true
+  elastic_net:
+    alpha: 1.0
+    l1_ratio: 0.5
+    max_iter: 1000
+  random_forest:
+    n_estimators: 200
+    max_depth: 12
+    min_samples_leaf: 5
+  hist_gradient_boosting:
+    max_iter: 300
+    learning_rate: 0.05
+    max_depth: 6
+  svr:
+    C: 1.0
+    kernel: rbf
+    epsilon: 0.1
+
+# --- Configuracion de clustering ---
+clustering:
+  n_clusters: 4
+  n_components_pca: 5
+  random_state: 42
+
+# --- Configuracion de optimizacion ---
+optimization:
+  cv_folds: 5
+  scoring: neg_mean_absolute_error

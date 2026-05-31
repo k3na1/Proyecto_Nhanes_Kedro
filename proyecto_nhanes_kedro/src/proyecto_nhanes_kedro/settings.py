@@ -31,10 +31,9 @@ https://docs.kedro.org/en/stable/configure/configuration_basics/#configuration""
 CONFIG_LOADER_ARGS = {
     "base_env": "base",
     "default_run_env": "local",
-    # "config_patterns": {
-    #     "spark" : ["spark*/"],
-    #     "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
-    # }
+    "config_patterns": {
+        "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
+    }
 }
 
 # Class that manages Kedro's library components.
