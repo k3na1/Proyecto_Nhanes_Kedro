@@ -2,3 +2,157 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
+
+p_alq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_ALQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_alq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_ALQ.parquet
+
+p_biopro_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BIOPRO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_biopro_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_BIOPRO.parquet
+
+p_bmx_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BMX.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_bmx_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_BMX.parquet
+
+p_bpxo_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_BPXO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_bpxo_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_BPXO.parquet
+
+p_demo_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_DEMO.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_demo_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_DEMO.parquet
+
+p_diq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_DIQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_diq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_DIQ.parquet
+
+p_ghb_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_GHB.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_ghb_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_GHB.parquet
+
+p_hdl_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_HDL.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_hdl_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_HDL.parquet
+
+p_mcq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_MCQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_mcq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_MCQ.parquet
+
+p_paq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_PAQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_paq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_PAQ.parquet
+
+p_slq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_SLQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_slq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_SLQ.parquet
+
+p_smq_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_SMQ.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_smq_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_SMQ.parquet
+
+p_tchol_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_TCHOL.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_tchol_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_TCHOL.parquet
+
+p_trigly_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/P_TRIGLY.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+p_trigly_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_TRIGLY.parquet
