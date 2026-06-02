@@ -3,6 +3,7 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
 
+# P_ALQ
 p_alq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_ALQ.xpt
@@ -14,6 +15,7 @@ p_alq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_ALQ.parquet
 
+# P_BIOPRO
 p_biopro_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_BIOPRO.xpt
@@ -25,6 +27,7 @@ p_biopro_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_BIOPRO.parquet
 
+# P_BMX
 p_bmx_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_BMX.xpt
@@ -36,6 +39,7 @@ p_bmx_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_BMX.parquet
 
+# P_BPXO
 p_bpxo_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_BPXO.xpt
@@ -47,6 +51,7 @@ p_bpxo_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_BPXO.parquet
 
+# P_DEMO
 p_demo_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_DEMO.xpt
@@ -58,6 +63,7 @@ p_demo_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_DEMO.parquet
 
+# P_DIQ
 p_diq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_DIQ.xpt
@@ -69,6 +75,7 @@ p_diq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_DIQ.parquet
 
+# P_GHB
 p_ghb_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_GHB.xpt
@@ -80,6 +87,7 @@ p_ghb_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_GHB.parquet
 
+# P_HDL
 p_hdl_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_HDL.xpt
@@ -91,6 +99,7 @@ p_hdl_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_HDL.parquet
 
+# P_MCQ
 p_mcq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_MCQ.xpt
@@ -102,6 +111,7 @@ p_mcq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_MCQ.parquet
 
+# P_PAQ
 p_paq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_PAQ.xpt
@@ -113,6 +123,7 @@ p_paq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_PAQ.parquet
 
+# P_SLQ
 p_slq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_SLQ.xpt
@@ -124,6 +135,7 @@ p_slq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_SLQ.parquet
 
+# P_SMQ
 p_smq_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_SMQ.xpt
@@ -135,6 +147,7 @@ p_smq_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_SMQ.parquet
 
+# P_TCHOL
 p_tchol_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_TCHOL.xpt
@@ -146,6 +159,7 @@ p_tchol_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_TCHOL.parquet
 
+# P_TRIGLY
 p_trigly_raw:
   type: pandas.GenericDataset
   filepath: data/01_raw/P_TRIGLY.xpt
@@ -156,3 +170,62 @@ p_trigly_raw:
 p_trigly_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_TRIGLY.parquet
+
+
+# --- Capa Primary (Seleccion de variables) ---
+
+p_alq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_ALQ.parquet
+
+p_biopro_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_BIOPRO.parquet
+
+p_bmx_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_BMX.parquet
+
+p_bpxo_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_BPXO.parquet
+
+p_demo_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_DEMO.parquet
+
+p_diq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_DIQ.parquet
+
+p_ghb_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_GHB.parquet
+
+p_hdl_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_HDL.parquet
+
+p_mcq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_MCQ.parquet
+
+p_paq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_PAQ.parquet
+
+p_slq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_SLQ.parquet
+
+p_smq_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_SMQ.parquet
+
+p_tchol_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_TCHOL.parquet
+
+p_trigly_primary:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/P_TRIGLY.parquet
