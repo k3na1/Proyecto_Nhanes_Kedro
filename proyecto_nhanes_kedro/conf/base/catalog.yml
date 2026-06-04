@@ -229,3 +229,64 @@ p_tchol_primary:
 p_trigly_primary:
   type: pandas.ParquetDataset
   filepath: data/03_primary/P_TRIGLY.parquet
+
+
+# --- Capa Feature (Limpieza individual por tabla) ---
+
+demo_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/DEMO_cleaned.parquet
+
+alq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/ALQ_cleaned.parquet
+
+bmx_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/BMX_cleaned.parquet
+
+bpxo_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/BPXO_cleaned.parquet
+
+diq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/DIQ_cleaned.parquet
+
+ghb_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/GHB_cleaned.parquet
+
+hdl_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/HDL_cleaned.parquet
+
+mcq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/MCQ_cleaned.parquet
+
+paq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/PAQ_cleaned.parquet
+
+slq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/SLQ_cleaned.parquet
+
+smq_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/SMQ_cleaned.parquet
+
+biopro_cleaned:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/BIOPRO_cleaned.parquet
+
+# --- Master Table (Union + tratamiento NaN) ---
+
+master_table_raw:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/master_table_raw.parquet
+
+master_table_clean:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/master_table_clean.parquet
