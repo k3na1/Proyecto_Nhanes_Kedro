@@ -3,7 +3,7 @@ from .nodes import (
     process_p_demo, process_p_alq, process_p_bmx, process_p_bpxo,
     process_p_diq, process_p_ghb, process_p_hdl, process_p_tchol,
     process_p_trigly, process_p_mcq, process_p_paq, process_p_slq,
-    process_p_smq, process_p_biopro
+    process_p_smq, process_p_biopro, process_p_mort
 )
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -92,6 +92,12 @@ def create_pipeline(**kwargs) -> Pipeline:
                 inputs="p_biopro_intermediate",
                 outputs="p_biopro_primary",
                 name="process_p_biopro_node"
+            ),
+            node(
+                func=process_p_mort,
+                inputs="p_mort_intermediate",
+                outputs="p_mort_primary",
+                name="process_p_mort_node"
             ),
         ]
     )

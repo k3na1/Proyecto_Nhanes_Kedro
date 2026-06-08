@@ -6,7 +6,7 @@
 # P_ALQ
 p_alq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_ALQ.xpt
+  filepath: data/01_raw/ALQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -18,7 +18,7 @@ p_alq_intermediate:
 # P_BIOPRO
 p_biopro_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_BIOPRO.xpt
+  filepath: data/01_raw/BIOPRO_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -30,7 +30,7 @@ p_biopro_intermediate:
 # P_BMX
 p_bmx_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_BMX.xpt
+  filepath: data/01_raw/BMX_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -42,7 +42,7 @@ p_bmx_intermediate:
 # P_BPXO
 p_bpxo_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_BPXO.xpt
+  filepath: data/01_raw/BPXO_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -54,7 +54,7 @@ p_bpxo_intermediate:
 # P_DEMO
 p_demo_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_DEMO.xpt
+  filepath: data/01_raw/DEMO_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -66,7 +66,7 @@ p_demo_intermediate:
 # P_DIQ
 p_diq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_DIQ.xpt
+  filepath: data/01_raw/DIQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -78,7 +78,7 @@ p_diq_intermediate:
 # P_GHB
 p_ghb_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_GHB.xpt
+  filepath: data/01_raw/GHB_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -90,7 +90,7 @@ p_ghb_intermediate:
 # P_HDL
 p_hdl_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_HDL.xpt
+  filepath: data/01_raw/HDL_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -102,7 +102,7 @@ p_hdl_intermediate:
 # P_MCQ
 p_mcq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_MCQ.xpt
+  filepath: data/01_raw/MCQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -114,7 +114,7 @@ p_mcq_intermediate:
 # P_PAQ
 p_paq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_PAQ.xpt
+  filepath: data/01_raw/PAQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -126,7 +126,7 @@ p_paq_intermediate:
 # P_SLQ
 p_slq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_SLQ.xpt
+  filepath: data/01_raw/SLQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -138,7 +138,7 @@ p_slq_intermediate:
 # P_SMQ
 p_smq_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_SMQ.xpt
+  filepath: data/01_raw/SMQ_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -150,7 +150,7 @@ p_smq_intermediate:
 # P_TCHOL
 p_tchol_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_TCHOL.xpt
+  filepath: data/01_raw/TCHOL_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -162,7 +162,7 @@ p_tchol_intermediate:
 # P_TRIGLY
 p_trigly_raw:
   type: pandas.GenericDataset
-  filepath: data/01_raw/P_TRIGLY.xpt
+  filepath: data/01_raw/TRIGLY_J.xpt
   file_format: sas
   load_args:
     format: xport
@@ -170,6 +170,20 @@ p_trigly_raw:
 p_trigly_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_TRIGLY.parquet
+
+# P_MORT (Mortalidad)
+p_mort_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/NHANES_2017_2018_MORT_2019_PUBLIC.dat
+  file_format: fwf
+  load_args:
+    widths: [14, 1, 1, 3, 1, 1, 1, 4, 8, 8, 3, 3]
+    names: ['SEQN', 'ELIGSTAT', 'MORTSTAT', 'UCOD_LEADING', 'DIABETES', 'HYPERTEN', 'DODQTR', 'DODYEAR', 'WGT_NEW', 'SA_WGT_NEW', 'PERMTH_INT', 'PERMTH_EXM']
+    dtype: str
+
+p_mort_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/P_MORT.parquet
 
 
 # --- Capa Primary (Seleccion de variables) ---
@@ -230,63 +244,12 @@ p_trigly_primary:
   type: pandas.ParquetDataset
   filepath: data/03_primary/P_TRIGLY.parquet
 
-
-# --- Capa Feature (Limpieza individual por tabla) ---
-
-demo_cleaned:
+p_mort_primary:
   type: pandas.ParquetDataset
-  filepath: data/04_feature/DEMO_cleaned.parquet
+  filepath: data/03_primary/P_MORT.parquet
 
-alq_cleaned:
+# --- Capa Feature Engineering / Model Input ---
+
+model_input:
   type: pandas.ParquetDataset
-  filepath: data/04_feature/ALQ_cleaned.parquet
-
-bmx_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/BMX_cleaned.parquet
-
-bpxo_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/BPXO_cleaned.parquet
-
-diq_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/DIQ_cleaned.parquet
-
-ghb_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/GHB_cleaned.parquet
-
-hdl_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/HDL_cleaned.parquet
-
-mcq_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/MCQ_cleaned.parquet
-
-paq_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/PAQ_cleaned.parquet
-
-slq_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/SLQ_cleaned.parquet
-
-smq_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/SMQ_cleaned.parquet
-
-biopro_cleaned:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/BIOPRO_cleaned.parquet
-
-# --- Master Table (Union + tratamiento NaN) ---
-
-master_table_raw:
-  type: pandas.ParquetDataset
-  filepath: data/04_feature/master_table_raw.parquet
-
-master_table_clean:
-  type: pandas.ParquetDataset
-  filepath: data/05_model_input/master_table_clean.parquet
+  filepath: data/05_model_input/model_input.parquet

@@ -18,5 +18,13 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name=f"convert_{ds}_to_parquet"
             )
         )
+    nodes.append(
+        node(
+            func=convert_to_parquet,
+            inputs="p_mort_raw",
+            outputs="p_mort_intermediate",
+            name="convert_p_mort_node"
+        )
+    )
         
     return pipeline(nodes)
