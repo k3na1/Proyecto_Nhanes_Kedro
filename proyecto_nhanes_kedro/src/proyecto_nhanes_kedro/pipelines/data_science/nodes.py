@@ -2,10 +2,7 @@ import pandas as pd
 import logging
 from typing import Dict, Tuple, Any
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
+from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 
 logger = logging.getLogger(__name__)
@@ -37,23 +34,26 @@ def split_data(data: pd.DataFrame, parameters: Dict[str, Any]) -> Tuple[pd.DataF
     
     return X_train, X_test, y_train, y_test
 
-def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> Pipeline:
+def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> HistGradientBoostingRegressor:
     """
-    Entrena el modelo de regresión lineal robusto.
+    Entrena el modelo de Gradient Boosting con restricciones monotónicas.
     """
-    # Pipeline: Imputación media -> Escalado estándar -> Regresión Lineal
-    model = Pipeline([
-        ('imputer', SimpleImputer(strategy='mean')),
-        ('scaler', StandardScaler()),
-        ('model', LinearRegression())
-    ])
+    # 1: correlación positiva (más ingresos, más años)
+    # -1: correlación negativa (más alcohol/IMC/presión, menos años)
+    mono_cst = [1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+    
+    model = HistGradientBoostingRegressor(
+        monotonic_cst=mono_cst,
+        max_depth=5,
+        random_state=42
+    )
     
     model.fit(X_train, y_train)
-    logger.info("Modelo de Regresión Lineal entrenado exitosamente.")
+    logger.info("Modelo de HistGradientBoosting entrenado exitosamente con restricciones monotónicas.")
     
     return model
 
-def evaluate_model(model: Pipeline, X_test: pd.DataFrame, y_test: pd.Series):
+def evaluate_model(model: HistGradientBoostingRegressor, X_test: pd.DataFrame, y_test: pd.Series):
     """
     Evalúa el modelo y registra las métricas MAE y R2.
     """
