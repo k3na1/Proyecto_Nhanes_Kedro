@@ -1,0 +1,17 @@
+# Parámetros para el pipeline de Data Science
+
+model_features:
+  - Ratio_Ingresos_Familiares
+  - Promedio_Bebidas_Alcohol
+  - IMC
+  - Presion_Sistolica
+  - Presion_Diastolica
+  - Anios_Fumando
+  - Glicohemoglobina
+  - Colesterol_LDL
+  - Creatinina
+  - ALT_Enzima_Hepatica
+
+model_options:
+  test_size: 0.2
+  random_state: 42

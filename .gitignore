@@ -1,3 +1,4 @@
 # Agentes 
 .agents/
 .venv/
+.gemini/

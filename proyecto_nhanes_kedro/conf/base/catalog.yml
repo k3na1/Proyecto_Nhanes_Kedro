@@ -253,3 +253,10 @@ p_mort_primary:
 model_input:
   type: pandas.ParquetDataset
   filepath: data/05_model_input/model_input.parquet
+
+# --- Capa Modelos ---
+
+regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/regressor.pickle
+  versioned: true
