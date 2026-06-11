@@ -137,8 +137,8 @@ class PredictionOutput(BaseModel):
         description="Mensaje descriptivo para el frontend.",
         json_schema_extra={
             "example": (
-                "Con tus hábitos actuales vivirás hasta los 65.2 años, "
-                "pero podrías vivir hasta los 78.5 años si mejoras tu salud. "
+                "Con tus hábitos actuales vivirás hasta los 65.2 años,"
+                "pero podrías vivir hasta los 78.5 años si mejoras tu salud."
                 "¡Puedes ganar 13.3 años de vida!"
             )
         },

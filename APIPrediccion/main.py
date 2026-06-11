@@ -33,7 +33,7 @@ MODEL_PATH: Path = Path(
     os.getenv("MODEL_PATH", str(Path(__file__).resolve().parent / "model" / "regressor.pickle"))
 )
 
-# Orden estricto de las 10 columnas que espera el pipeline
+# Orden estricto de las 10 columnas que el pipeline espera
 FEATURE_COLUMNS: list[str] = [
     "Ratio_Ingresos_Familiares",
     "Promedio_Bebidas_Alcohol",

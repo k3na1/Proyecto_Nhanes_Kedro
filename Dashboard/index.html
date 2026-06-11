@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard de consulta médica para predecir la esperanza de vida basado en hábitos de salud usando Machine Learning." />
+  <title>LifeSpan AI — Predicción de Esperanza de Vida</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__icon" aria-hidden="true">🫀</div>
+      <div>
+        <h1 class="header__title">LifeSpan AI</h1>
+        <p class="header__subtitle">Predicción de Esperanza de Vida — Consulta Médica Inteligente</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main Grid ───────────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ════ FORM PANEL ════ -->
+    <section class="card" aria-label="Formulario de datos del paciente">
+      <div class="card__header">
+        <span class="card__icon" aria-hidden="true">📋</span>
+        <h2 class="card__title">Datos del Paciente</h2>
+      </div>
+
+      <form id="prediction-form" novalidate>
+
+        <!-- Datos Personales -->
+        <div class="form-section">
+          <div class="form-section__title">Datos Personales</div>
+          <div class="form-grid form-grid--single">
+            <div class="input-group input-group--required">
+              <label for="edad_actual">Edad Actual <span class="unit">(años)</span></label>
+              <input type="number" id="edad_actual" name="edad_actual"
+                     placeholder="Ej: 35" min="1" max="120" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Composición Corporal -->
+        <div class="form-section">
+          <div class="form-section__title">Composición Corporal</div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="IMC">IMC <span class="unit">(kg/m²)</span></label>
+              <input type="number" id="IMC" name="IMC"
+                     placeholder="Ej: 27.4" step="0.1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="Ratio_Ingresos_Familiares">Ratio Ingresos Familiares</label>
+              <input type="number" id="Ratio_Ingresos_Familiares" name="Ratio_Ingresos_Familiares"
+                     placeholder="Ej: 3.5" step="0.1" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Signos Vitales -->
+        <div class="form-section">
+          <div class="form-section__title">Signos Vitales</div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="Presion_Sistolica">Presión Sistólica <span class="unit">(mmHg)</span></label>
+              <input type="number" id="Presion_Sistolica" name="Presion_Sistolica"
+                     placeholder="Ej: 130" step="1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="Presion_Diastolica">Presión Diastólica <span class="unit">(mmHg)</span></label>
+              <input type="number" id="Presion_Diastolica" name="Presion_Diastolica"
+                     placeholder="Ej: 85" step="1" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Hábitos de Vida -->
+        <div class="form-section">
+          <div class="form-section__title">Hábitos de Vida</div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="Anios_Fumando">Años Fumando</label>
+              <input type="number" id="Anios_Fumando" name="Anios_Fumando"
+                     placeholder="Ej: 10" step="1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="Promedio_Bebidas_Alcohol">Bebidas Alcohol/Día</label>
+              <input type="number" id="Promedio_Bebidas_Alcohol" name="Promedio_Bebidas_Alcohol"
+                     placeholder="Ej: 2.0" step="0.1" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Laboratorio Clínico -->
+        <div class="form-section">
+          <div class="form-section__title">Laboratorio Clínico</div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="Glicohemoglobina">Glicohemoglobina <span class="unit">(%)</span></label>
+              <input type="number" id="Glicohemoglobina" name="Glicohemoglobina"
+                     placeholder="Ej: 5.7" step="0.1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="Colesterol_LDL">Colesterol LDL <span class="unit">(mg/dL)</span></label>
+              <input type="number" id="Colesterol_LDL" name="Colesterol_LDL"
+                     placeholder="Ej: 120" step="1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="Creatinina">Creatinina <span class="unit">(mg/dL)</span></label>
+              <input type="number" id="Creatinina" name="Creatinina"
+                     placeholder="Ej: 0.9" step="0.1" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="ALT_Enzima_Hepatica">ALT Enzima Hepática <span class="unit">(U/L)</span></label>
+              <input type="number" id="ALT_Enzima_Hepatica" name="ALT_Enzima_Hepatica"
+                     placeholder="Ej: 25" step="1" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Error Banner -->
+        <div id="error-banner" class="error-banner" role="alert">
+          <span aria-hidden="true">⚠️</span>
+          <span id="error-text"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" id="btn-submit" class="btn-submit">
+          <span class="btn-text">Analizar Esperanza de Vida</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+    </section>
+
+    <!-- ════ RESULTS PANEL ════ -->
+    <section class="card results" aria-label="Resultados de la predicción" aria-live="polite">
+      <div class="card__header">
+        <span class="card__icon" aria-hidden="true">📊</span>
+        <h2 class="card__title">Resultados de la Predicción</h2>
+      </div>
+
+      <!-- Placeholder -->
+      <div id="results-placeholder" class="results__placeholder">
+        <div class="results__placeholder-icon" aria-hidden="true">🔬</div>
+        <p class="results__placeholder-text">
+          Completa el formulario con los datos del paciente<br />
+          y presiona <strong>"Analizar"</strong> para obtener<br />
+          la predicción de esperanza de vida.
+        </p>
+      </div>
+
+      <!-- Results Content -->
+      <div id="results-content" class="results__content">
+
+        <!-- SVG Gauge -->
+        <div class="gauge-container">
+          <div class="gauge">
+            <svg viewBox="0 0 200 200" width="200" height="200">
+              <defs>
+                <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#06d6a0" />
+                  <stop offset="100%" stop-color="#118ab2" />
+                </linearGradient>
+              </defs>
+              <circle class="gauge__track" cx="100" cy="100" r="90" />
+              <circle class="gauge__fill" id="gauge-fill" cx="100" cy="100" r="90" />
+            </svg>
+            <div class="gauge__center">
+              <span class="gauge__value" id="gauge-value">—</span>
+              <span class="gauge__label">Esperanza Óptima</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-card__label">Hábitos Actuales</div>
+            <div class="stat-card__value stat-card__value--current">
+              <span id="stat-current">—</span>
+              <span class="stat-card__unit"> años</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card--optimal">
+            <div class="stat-card__label">Hábitos Óptimos</div>
+            <div class="stat-card__value stat-card__value--optimal">
+              <span id="stat-optimal">—</span>
+              <span class="stat-card__unit"> años</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gain Banner -->
+        <div class="gain-banner">
+          <span class="gain-banner__icon" aria-hidden="true">🌱</span>
+          <div class="gain-banner__text">
+            <div class="gain-banner__number">+<span id="gain-number">0</span> años</div>
+            <div class="gain-banner__label">Años de vida que puedes ganar mejorando tus hábitos</div>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="results__message" id="result-message"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────── -->
+  <footer class="footer">
+    LifeSpan AI — Powered by Machine Learning &middot; NHANES Dataset
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
