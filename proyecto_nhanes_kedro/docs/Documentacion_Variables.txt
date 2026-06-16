@@ -1,0 +1,186 @@
+-- DEMOGRAPHICS DATA (2017-2018) --
+
+DEMO_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DEMO_J.htm
+
+
+-- DIETARY DATA (2017-2018) --
+
+DR1FF_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR1IFF_J.htm
+
+DR2FF_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR2IFF_J.htm
+
+DR1TOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR1TOT_J.htm
+
+DR2TOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR2TOT_J.htm
+
+DRXFCD_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DRXFCD_J.htm
+
+DSBI: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DSBI.htm
+
+DSII: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DSII.htm
+
+DSPI: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DSPI.htm
+
+DS1IDS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DS1IDS_J.htm
+
+DS2IDS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DS2IDS_J.htm
+
+DS1TOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DS1TOT_J.htm
+
+DS2TOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DS2TOT_J.htm
+
+DSQIDS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DSQIDS_J.htm
+
+DSQTOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DSQTOT_J.htm
+
+
+-- EXAMINATION DATA (2017-2018) --
+
+AUX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/AUX_J.htm
+
+AUXAR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/AUXAR_J.htm
+
+AUXTYM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/AUXTYM_J.htm
+
+AUXWBR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/AUXWBR_J.htm
+
+BPX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BPX_J.htm
+
+BPXO_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BPXO_J.htm
+
+BMX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.htm
+
+DXXAG_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXXAG_J.htm
+
+DXXFEM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXXFEM_J.htm
+
+DXXSPN_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXXSPN_J.htm
+
+DXX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXX_J.htm
+
+LUX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/LUX_J.htm
+
+OHXDEN_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/OHXDEN_J.htm
+
+OHXREF_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/OHXREF_J.htm
+
+
+-- LABORATORY DATA (2017-2018) --
+
+ALB_CR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/ALB_CR_J.htm
+
+SSAGP_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSAGP_J.htm
+
+UTAS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UTAS_J.htm
+
+UAS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UAS_J.htm
+
+HDL_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HDL_J.htm
+
+TRIGLY_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/TRIGLY_J.htm
+
+TCHOL_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/TCHOL_J.htm
+
+UCM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UCM_J.htm
+
+CRCO_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/CRCO_J.htm
+
+CBC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/CBC_J.htm
+
+COT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/COT_J.htm
+
+UCOT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UCOT_J.htm
+
+CMV_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/CMV_J.htm
+
+ETHOX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/ETHOX_J.htm
+
+FASTQX_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FASTQX_J.htm
+
+FERTIN_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FERTIN_J.htm
+
+FR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FR_J.htm
+
+SSFR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSFR_J.htm
+
+FOLATE_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FOLATE_J.htm
+
+FOLFMS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FOLFMS_J.htm
+
+GHB_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GHB_J.htm
+
+SSGLYP_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSGLYP_J.htm
+
+HEPA_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HEPA_J.htm
+
+HEPBD_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HEPBD_J.htm
+
+HEPB_S_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HEPB_S_J.htm
+
+HEPC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HEPC_J.htm
+
+HEPE_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HEPE_J.htm
+
+HSCRP_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HSCRP_J.htm
+
+HIV_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HIV_J.htm
+
+INS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/INS_J.htm
+
+UIO_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UIO_J.htm
+
+FETIB_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FETIB_J.htm
+
+PBCD_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PBCD_J.htm
+
+UHG_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UHG_J.htm
+
+IHGEM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/IHGEM_J.htm
+
+UM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UM_J.htm
+
+SSNEON_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSNEON_J.htm
+
+UNI_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UNI_J.htm
+
+OPD_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/OPD_J.htm
+
+PERNT_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PERNT_J.htm
+
+PFAS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PFAS_J.htm
+
+SSPFAS_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSPFAS_J.htm
+
+EPHPP_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/EPHPP_J.htm
+
+PHTHTE_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PHTHTE_J.htm
+
+GLU_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GLU_J.htm
+
+PAH_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PAH_J.htm
+
+UPHOPM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UPHOPM_J.htm
+
+SSTST_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSTST_J.htm
+
+BIOPRO_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm
+
+TFR_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/TFR_J.htm
+
+UCFLOW_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UCFLOW_J.htm
+
+UCPREG_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UCPREG_J.htm
+
+VITAEC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VITAEC_J.htm
+
+VIC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VIC_J.htm
+
+VID_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VID_J.htm
+
+UVOC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/UVOC_J.htm
+
+SSUVOC_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSUVOC_J.htm
+
+SSUVCM_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SSUVCM_J.htm
+
+VOCWB_J: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm

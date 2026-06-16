@@ -156,3 +156,1028 @@ p_trigly_raw:
 p_trigly_intermediate:
   type: pandas.ParquetDataset
   filepath: data/02_intermediate/P_TRIGLY.parquet
+
+# --- AUTOMATICALLY GENERATED FASE 1 NHANES ---
+
+demographics_master:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/demographics_master.parquet
+
+dietary_master:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/dietary_master.parquet
+
+examination_master:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/examination_master.parquet
+
+laboratory_master:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/laboratory_master.parquet
+
+# --- SECTION: DEMOGRAPHICS ---
+
+demo_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DEMO_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+demo_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DEMO_J.parquet
+
+# --- SECTION: DIETARY ---
+
+dr1ff_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DR1IFF_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dr1ff_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DR1FF_J.parquet
+
+dr2ff_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DR2IFF_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dr2ff_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DR2FF_J.parquet
+
+dr1tot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DR1TOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dr1tot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DR1TOT_J.parquet
+
+dr2tot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DR2TOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dr2tot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DR2TOT_J.parquet
+
+drxfcd_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DRXFCD_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+drxfcd_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DRXFCD_J.parquet
+
+dsbi_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DSBI.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dsbi_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DSBI.parquet
+
+dsii_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DSII.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dsii_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DSII.parquet
+
+dspi_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DSPI.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dspi_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DSPI.parquet
+
+ds1ids_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DS1IDS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ds1ids_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DS1IDS_J.parquet
+
+ds2ids_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DS2IDS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ds2ids_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DS2IDS_J.parquet
+
+ds1tot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DS1TOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ds1tot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DS1TOT_J.parquet
+
+ds2tot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DS2TOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ds2tot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DS2TOT_J.parquet
+
+dsqids_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DSQIDS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dsqids_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DSQIDS_J.parquet
+
+dsqtot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DSQTOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dsqtot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DSQTOT_J.parquet
+
+# --- SECTION: EXAMINATION ---
+
+aux_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/AUX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+aux_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/AUX_J.parquet
+
+auxar_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/AUXAR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+auxar_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/AUXAR_J.parquet
+
+auxtym_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/AUXTYM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+auxtym_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/AUXTYM_J.parquet
+
+auxwbr_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/AUXWBR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+auxwbr_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/AUXWBR_J.parquet
+
+bpx_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/BPX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+bpx_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/BPX_J.parquet
+
+bpxo_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/BPXO_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+bpxo_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/BPXO_J.parquet
+
+bmx_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/BMX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+bmx_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/BMX_J.parquet
+
+dxxag_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DXXAG_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dxxag_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DXXAG_J.parquet
+
+dxxfem_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DXXFEM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dxxfem_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DXXFEM_J.parquet
+
+dxxspn_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DXXSPN_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dxxspn_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DXXSPN_J.parquet
+
+dxx_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/DXX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+dxx_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/DXX_J.parquet
+
+lux_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/LUX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+lux_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/LUX_J.parquet
+
+ohxden_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/OHXDEN_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ohxden_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/OHXDEN_J.parquet
+
+ohxref_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/OHXREF_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ohxref_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/OHXREF_J.parquet
+
+# --- SECTION: LABORATORY ---
+
+alb_cr_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/ALB_CR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+alb_cr_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ALB_CR_J.parquet
+
+ssagp_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSAGP_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssagp_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSAGP_J.parquet
+
+utas_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UTAS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+utas_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UTAS_J.parquet
+
+uas_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UAS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uas_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UAS_J.parquet
+
+hdl_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HDL_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hdl_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HDL_J.parquet
+
+trigly_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/TRIGLY_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+trigly_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/TRIGLY_J.parquet
+
+tchol_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/TCHOL_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+tchol_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/TCHOL_J.parquet
+
+ucm_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UCM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ucm_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UCM_J.parquet
+
+crco_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/CRCO_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+crco_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/CRCO_J.parquet
+
+cbc_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/CBC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+cbc_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/CBC_J.parquet
+
+cot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/COT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+cot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/COT_J.parquet
+
+ucot_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UCOT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ucot_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UCOT_J.parquet
+
+cmv_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/CMV_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+cmv_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/CMV_J.parquet
+
+ethox_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/ETHOX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ethox_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ETHOX_J.parquet
+
+fastqx_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FASTQX_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+fastqx_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FASTQX_J.parquet
+
+fertin_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FERTIN_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+fertin_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FERTIN_J.parquet
+
+fr_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+fr_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FR_J.parquet
+
+ssfr_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSFR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssfr_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSFR_J.parquet
+
+folate_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FOLATE_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+folate_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FOLATE_J.parquet
+
+folfms_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FOLFMS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+folfms_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FOLFMS_J.parquet
+
+ghb_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/GHB_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ghb_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/GHB_J.parquet
+
+ssglyp_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSGLYP_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssglyp_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSGLYP_J.parquet
+
+hepa_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HEPA_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hepa_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HEPA_J.parquet
+
+hepbd_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HEPBD_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hepbd_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HEPBD_J.parquet
+
+hepb_s_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HEPB_S_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hepb_s_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HEPB_S_J.parquet
+
+hepc_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HEPC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hepc_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HEPC_J.parquet
+
+hepe_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HEPE_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hepe_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HEPE_J.parquet
+
+hscrp_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HSCRP_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hscrp_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HSCRP_J.parquet
+
+hiv_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/HIV_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+hiv_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/HIV_J.parquet
+
+ins_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/INS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ins_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/INS_J.parquet
+
+uio_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UIO_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uio_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UIO_J.parquet
+
+fetib_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/FETIB_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+fetib_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/FETIB_J.parquet
+
+pbcd_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/PBCD_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+pbcd_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/PBCD_J.parquet
+
+uhg_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UHG_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uhg_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UHG_J.parquet
+
+ihgem_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/IHGEM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ihgem_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/IHGEM_J.parquet
+
+um_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+um_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UM_J.parquet
+
+ssneon_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSNEON_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssneon_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSNEON_J.parquet
+
+uni_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UNI_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uni_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UNI_J.parquet
+
+opd_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/OPD_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+opd_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/OPD_J.parquet
+
+pernt_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/PERNT_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+pernt_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/PERNT_J.parquet
+
+pfas_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/PFAS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+pfas_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/PFAS_J.parquet
+
+sspfas_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSPFAS_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+sspfas_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSPFAS_J.parquet
+
+ephpp_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/EPHPP_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ephpp_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/EPHPP_J.parquet
+
+phthte_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/PHTHTE_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+phthte_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/PHTHTE_J.parquet
+
+glu_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/GLU_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+glu_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/GLU_J.parquet
+
+pah_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/PAH_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+pah_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/PAH_J.parquet
+
+uphopm_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UPHOPM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uphopm_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UPHOPM_J.parquet
+
+sstst_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSTST_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+sstst_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSTST_J.parquet
+
+biopro_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/BIOPRO_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+biopro_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/BIOPRO_J.parquet
+
+tfr_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/TFR_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+tfr_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/TFR_J.parquet
+
+ucflow_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UCFLOW_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ucflow_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UCFLOW_J.parquet
+
+ucpreg_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UCPREG_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ucpreg_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UCPREG_J.parquet
+
+vitaec_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/VITAEC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+vitaec_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/VITAEC_J.parquet
+
+vic_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/VIC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+vic_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/VIC_J.parquet
+
+vid_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/VID_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+vid_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/VID_J.parquet
+
+uvoc_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/UVOC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+uvoc_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/UVOC_J.parquet
+
+ssuvoc_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSUVOC_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssuvoc_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSUVOC_J.parquet
+
+ssuvcm_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/SSUVCM_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+ssuvcm_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/SSUVCM_J.parquet
+
+vocwb_j_raw:
+  type: pandas.GenericDataset
+  filepath: data/01_raw/VOCWB_J.xpt
+  file_format: sas
+  load_args:
+    format: xport
+
+vocwb_j_intermediate:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/VOCWB_J.parquet
+
+
+# --- FASE 2: MASTER INTEGRADO CON DEMOGRAFIA ---
+demolab_master:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/DemoLab_Master.parquet
+
+
+# --- FASE 3: DATASET LIMPIO ---
+demolab_clean:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/DemoLab_Clean.parquet
+
+
+# --- FASE 4: FEATURE ENGINEERING ---
+demolab_engineered:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/DemoLab_Engineered.parquet
+
+
+# --- FASE 5: DATASET FINAL ---
+df_master:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/df_master.parquet
+
+# --- FASE 6: MODELO FINAL ---
+diabetes_web_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/diabetes_web_model.pkl
+  backend: pickle
+
