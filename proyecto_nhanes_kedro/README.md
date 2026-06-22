@@ -17,21 +17,40 @@ In order to get the best out of the template:
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
 
-## How to install dependencies
+## Cómo ejecutar este proyecto (Reproducibilidad)
 
-Declare any dependencies in `requirements.txt` for `pip` installation.
+Para garantizar que el proyecto se ejecute correctamente en cualquier equipo sin conflictos de dependencias, recomendamos usar un entorno virtual (`.venv`). Sigue estos pasos:
 
-To install them, run:
+### 1. Crear el entorno virtual
+Abre tu terminal en la carpeta raíz del proyecto y ejecuta:
 
+```bash
+python -m venv .venv
 ```
+
+### 2. Activar el entorno virtual
+Dependiendo de tu sistema operativo, ejecuta el comando correspondiente:
+
+- **Windows**:
+  ```bash
+  .venv\Scripts\activate
+  ```
+- **macOS / Linux**:
+  ```bash
+  source .venv/bin/activate
+  ```
+
+### 3. Instalar dependencias
+Con el entorno virtual activo, instala todas las dependencias necesarias (Kedro, XGBoost, Scikit-learn, Pandas, Numpy, etc.):
+
+```bash
 pip install -r requirements.txt
 ```
 
-## How to run your Kedro pipeline
+### 4. Ejecutar el pipeline de Kedro
+Una vez instaladas las dependencias, puedes ejecutar el pipeline completo de procesamiento y modelamiento de datos:
 
-You can run your Kedro project with:
-
-```
+```bash
 kedro run
 ```
 

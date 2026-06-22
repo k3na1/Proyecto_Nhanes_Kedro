@@ -12,5 +12,15 @@ def register_pipelines() -> dict[str, Pipeline]:
         A mapping from pipeline names to ``Pipeline`` objects.
     """
     pipelines = find_pipelines(raise_errors=True)
-    pipelines["__default__"] = sum(pipelines.values())
+    
+    # Ensuring the default pipeline executes phases in the correct order
+    default_pipeline = (
+        pipelines.get("fase1_tablas_master", Pipeline([])) +
+        pipelines.get("fase2_integracion", Pipeline([])) +
+        pipelines.get("fase3_limpieza", Pipeline([])) +
+        pipelines.get("fase4_feature_engineering", Pipeline([])) +
+        pipelines.get("fase5_dataset_final", Pipeline([])) +
+        pipelines.get("fase6_modelamiento", Pipeline([]))
+    )
+    pipelines["__default__"] = default_pipeline
     return pipelines

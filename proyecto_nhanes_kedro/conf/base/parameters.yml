@@ -1,0 +1,24 @@
+model_params:
+  web_features:
+    - RIDAGEYR
+    - RIAGENDR
+    - BMXBMI
+    - BMXWAIST
+    - LBXSGL
+    - LBDSTRSI
+    - LBDHDD
+    - BPXSY1
+    - BPXDI1
+  target_col: DIABETES_RISK
+  test_size: 0.20
+  random_state: 42
+  xgboost:
+    n_estimators: 700
+    max_depth: 5
+    learning_rate: 0.01
+    min_child_weight: 1
+    subsample: 0.9
+    colsample_bytree: 0.5
+    gamma: 0.5
+    reg_alpha: 0.01
+    reg_lambda: 3.0
